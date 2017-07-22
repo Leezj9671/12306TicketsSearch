@@ -33,6 +33,7 @@ def cli():
     options = ''.join([
         key for key, value in arguments.items() if value is True
     ])
+    options = '-gdtkz' if not options else options
     from_station = stations.get(arguments['<from>'])
     to_station = stations.get(arguments['<to>'])
     date = arguments['<date>']
@@ -50,6 +51,7 @@ def cli():
         cm = rt.split('|')
         if not cm[3][0].lower() in options:
             continue
+        # train_no = cm[2];
         # train_no = cm[2];
         station_train_code = cm[3];
         # start_station_telecode = cm[4];
@@ -111,7 +113,6 @@ def cli():
             wz_num
             ])
     print(tablev)
-    
-    
+
 if __name__ == '__main__':
     cli()

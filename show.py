@@ -20,12 +20,8 @@ import requests
 from docopt import docopt
 from pprint import pprint
 from prettytable import PrettyTable
-from colorama import init, Fore
 
 from stations import stations
-
-# colorama init
-init()
 
 header = '车次 车站 时间 历时 商务座 一等 二等 软卧 硬卧 硬座 无座'.split()
 code2stations = {v:k for k,v in stations.items()}
@@ -102,11 +98,11 @@ def cli():
         tablev.add_row([
             station_train_code,
             '\n'.join([
-                Fore.GREEN + code2stations[from_station_telecode] + Fore.RESET,
-                Fore.RED + code2stations[to_station_telecode] + Fore.RESET]),
+                code2stations[from_station_telecode],
+                code2stations[to_station_telecode]]),
             '\n'.join([
-                Fore.GREEN + start_time + Fore.RESET,
-                Fore.RED + arrive_time + Fore.RESET]),
+                start_time,
+                arrive_time]),
             lishi,
             swz_num,
             zy_num,

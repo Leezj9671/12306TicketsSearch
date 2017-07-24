@@ -27,8 +27,11 @@ tickets [-gdtkz] <from> <to> <date>
 
 ### Example:
 ```bash
-    tickets 北京 上海 2016-10-10
-    tickets -dg 成都 南京 2016-10-10
+    python3 show.py  北京 上海 2017-07-24
+    # OR using setup
+    python3 setup.py install
+    tickets 北京 上海 2017-07-24
+    tickets -dg 成都 南京 2017-07-24
 ```
 ## TODO
 - 封装成类

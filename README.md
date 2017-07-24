@@ -32,4 +32,4 @@ tickets [-gdtkz] <from> <to> <date>
 ```
 ## TODO
 - 封装成类
-- setuptools进行SETUP
+- <del>setuptools进行SETUP</del>已完成

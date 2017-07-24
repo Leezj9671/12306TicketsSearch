@@ -13,8 +13,8 @@ Options:
     -z          直达
 
 Example:
-    tickets 北京 上海 2016-10-10
-    tickets -dg 成都 南京 2016-10-10
+    python3 show.py 北京 上海 2016-10-10
+    python3 show.py -dg 成都 南京 2016-10-10
 """
 import requests
 from docopt import docopt

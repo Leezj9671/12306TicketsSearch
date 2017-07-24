@@ -1,2 +1,5 @@
 hcp/
 __pycache__/
+tickets.egg-info/
+build/
+dist/
